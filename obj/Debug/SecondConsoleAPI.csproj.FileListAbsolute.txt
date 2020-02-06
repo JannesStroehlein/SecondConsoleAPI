@@ -1,0 +1,5 @@
+H:\Visual Studio Sources\SecondConsoleAPI\SecondConsoleAPI\bin\Debug\SecondConsoleAPI.dll
+H:\Visual Studio Sources\SecondConsoleAPI\SecondConsoleAPI\bin\Debug\SecondConsoleAPI.pdb
+H:\Visual Studio Sources\SecondConsoleAPI\SecondConsoleAPI\obj\Debug\SecondConsoleAPI.csprojAssemblyReference.cache
+H:\Visual Studio Sources\SecondConsoleAPI\SecondConsoleAPI\obj\Debug\SecondConsoleAPI.dll
+H:\Visual Studio Sources\SecondConsoleAPI\SecondConsoleAPI\obj\Debug\SecondConsoleAPI.pdb
