@@ -3,3 +3,10 @@ H:\Visual Studio Sources\SecondConsoleAPI\SecondConsoleAPI\bin\Debug\SecondConso
 H:\Visual Studio Sources\SecondConsoleAPI\SecondConsoleAPI\obj\Debug\SecondConsoleAPI.csprojAssemblyReference.cache
 H:\Visual Studio Sources\SecondConsoleAPI\SecondConsoleAPI\obj\Debug\SecondConsoleAPI.dll
 H:\Visual Studio Sources\SecondConsoleAPI\SecondConsoleAPI\obj\Debug\SecondConsoleAPI.pdb
+H:\Visual Studio Sources\SecondConsoleAPI\SecondConsoleAPI\obj\Debug\SecondConsoleAPI.csproj.CoreCompileInputs.cache
+E:\Visual Studio Sources\SecondConsoleAPI\SecondConsoleAPI\bin\Debug\SecondConsoleAPI.dll
+E:\Visual Studio Sources\SecondConsoleAPI\SecondConsoleAPI\bin\Debug\SecondConsoleAPI.pdb
+E:\Visual Studio Sources\SecondConsoleAPI\SecondConsoleAPI\obj\Debug\SecondConsoleAPI.csproj.CoreCompileInputs.cache
+E:\Visual Studio Sources\SecondConsoleAPI\SecondConsoleAPI\obj\Debug\SecondConsoleAPI.dll
+E:\Visual Studio Sources\SecondConsoleAPI\SecondConsoleAPI\obj\Debug\SecondConsoleAPI.pdb
+E:\Visual Studio Sources\SecondConsoleAPI\SecondConsoleAPI\obj\Debug\SecondConsoleAPI.csproj.AssemblyReference.cache

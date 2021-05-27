@@ -33,7 +33,7 @@ namespace SecondConsoleAPI
         /// </summary>
         public bool ShowIcon { get { return this.Window.ShowIcon; } set { this.Window.Invoke((MethodInvoker)(() => { this.Window.ShowIcon = value; })); } }
 
-        private String Title;
+        private string Title;
         private Thread Window_Thread;
         private Form Window;
         private RichTextBox Window_Text;
@@ -48,55 +48,84 @@ namespace SecondConsoleAPI
         /// <summary>
         /// Initializes the SecondConsole without any parameters
         /// </summary>
-        public SecondConsole() => SetUp("SecondConsole", 800, 500, 12, false);
+        public SecondConsole() : this("SecondConsole", 800, 500, 12, false)
+        {
+
+        }
         /// <summary>
         /// Initializes the SecondConsole
         /// </summary>
         /// <param name="title">The Window's title</param>
-        public SecondConsole(String title) => SetUp(title, 800, 500, 12, false);
+        public SecondConsole(string title) : this(title, 800, 500, 12, false)
+        {
+
+        }
         /// <summary>
         /// Initializes the SecondConsole
         /// </summary>
         /// <param name="title">The Window's title</param>
         /// <param name="showicon">Set the titlebar's icon on or off</param>
-        public SecondConsole(String title, bool showicon) => SetUp(title, 800, 500, 12, showicon);
+        public SecondConsole(string title, bool showicon) : this(title, 800, 500, 12, showicon)
+        {
+
+        }
         /// <summary>
         /// Initializes the SecondConsole
         /// </summary>
         /// <param name="title">The Window's title</param>
         /// <param name="width">The Window's width</param>
         /// <param name="heigt">The Window's heigt</param>
-        public SecondConsole(String title, int width, int heigt) => SetUp(title, width, heigt, 12, false);
+        public SecondConsole(string title, int width, int heigt) : this(title, width, heigt, 12, false)
+        {
+
+        }
         /// <summary>
         /// Initializes the SecondConsole
         /// </summary>
         /// <param name="title">The Window's title</param>
         /// <param name="fontsize">The Window's font</param>
-        public SecondConsole(String title, int fontsize) => SetUp(title, 800, 500, fontsize, false);
+        public SecondConsole(string title, int fontsize) : this(title, 800, 500, fontsize, false)
+        {
+
+        }
         /// <summary>
         /// Initializes the SecondConsole
         /// </summary>
         /// <param name="title">The Window's title</param>
         /// <param name="fontsize">The Window's font</param>
         /// <param name="showicon">Set the titlebar's icon on or off</param>
-        public SecondConsole(String title, int fontsize, bool showicon) => SetUp(title, 800, 500, fontsize, showicon);
+        public SecondConsole(string title, int fontsize, bool showicon) : this(title, 800, 500, fontsize, showicon)
+        {
+
+        }
+        /// <summary>
+    /// Initializes the SecondConsole
+    /// </summary>
+    /// <param name="title">The Window's title</param>
+    /// <param name="width">The Window's width</param>
+    /// <param name="heigt">The Window's heigt</param>
+    /// <param name="fontsize">>The Window's font</param>
+        public SecondConsole(string title, int width, int heigt, int fontsize) : this(title, width, heigt, fontsize, false)
+        {
+
+        }
         /// <summary>
         /// Initializes the SecondConsole
         /// </summary>
         /// <param name="title">The Window's title</param>
         /// <param name="width">The Window's width</param>
         /// <param name="heigt">The Window's heigt</param>
-        /// <param name="fontsize">>The Window's font</param>
-        public SecondConsole(String title, int width, int heigt, int fontsize) => SetUp(title, width, heigt, fontsize, false);
-        /// <summary>
-        /// Initializes the SecondConsole
-        /// </summary>
-        /// <param name="title">The Window's title</param>
-        /// <param name="width">The Window's width</param>
-        /// <param name="heigt">The Window's heigt</param>
         /// <param name="fontsize">The Window's font</param>
         /// <param name="showicon">Set the titlebar's icon on or off</param>
-        public SecondConsole(String title, int width, int heigt, int fontsize, bool showicon) => SetUp(title, width, heigt, fontsize, showicon);
+        public SecondConsole(string title, int width, int heigt, int fontsize, bool showicon)
+        {
+            this.Title = title;
+            this.pre_showicon = showicon;
+            this.pre_width = width;
+            this.pre_heigt = heigt;
+            this.pre_fontsize = fontsize;
+            this.IsInitialized = false;
+        }
         /// <summary>
         /// Opens the Console Window in a new Thread
         /// </summary>
@@ -139,7 +168,7 @@ namespace SecondConsoleAPI
         /// Writes into the Second Console
         /// </summary>
         /// <param name="value">writes a String value</param>
-        public void Write(String value) => Print(value, SecondConsoleColors.White, false, false);
+        public void Write(string value) => Print(value, SecondConsoleColors.White, false, false);
         /// <summary>
         /// Writes into the Second Console
         /// </summary>
@@ -156,7 +185,7 @@ namespace SecondConsoleAPI
         /// <summary>
         /// Writes into the console and creates a new line
         /// </summary>
-        public void WriteLine(String value) => Print(value, SecondConsoleColors.White, true, false);
+        public void WriteLine(string value) => Print(value, SecondConsoleColors.White, true, false);
         /// <summary>
         /// Writes into the console and creates a new line
         /// </summary>
@@ -170,7 +199,7 @@ namespace SecondConsoleAPI
         /// Writes into the Second Console
         /// </summary>
         /// <param name="color">The text color</param>
-        public void WriteColor(SecondConsoleColors color, String value) => Print(value, color, false, false);
+        public void WriteColor(SecondConsoleColors color, string value) => Print(value, color, false, false);
         /// <summary>
         /// Writes into the Second Console
         /// </summary>
@@ -185,7 +214,7 @@ namespace SecondConsoleAPI
         /// Writes into the console and creates a new line
         /// </summary>
         /// <param name="color">The text color</param>
-        public void WriteLineColor(SecondConsoleColors color, String value) => Print(value, color, true, false);
+        public void WriteLineColor(SecondConsoleColors color, string value) => Print(value, color, true, false);
         /// <summary>
         /// Writes into the console and creates a new line
         /// </summary>
@@ -194,11 +223,11 @@ namespace SecondConsoleAPI
         /// <summary>
         /// Writes a colorful String into the Console
         /// </summary>
-        public void WriteFormatted(String value) => Print(value, SecondConsoleColors.White, false, true);
+        public void WriteFormatted(string value) => Print(value, SecondConsoleColors.White, false, true);
         /// <summary>
         /// Writes a colorful String into the Console
         /// </summary>
-        public void WriteLineFormatted(String value) => Print(value, SecondConsoleColors.White, true, true);
+        public void WriteLineFormatted(string value) => Print(value, SecondConsoleColors.White, true, true);
         /// <summary>
         /// Clears the output of the SecondConsole
         /// </summary>
@@ -214,15 +243,6 @@ namespace SecondConsoleAPI
                 throw new NotInitializedExeption("Before using the SecondConsole you have to open it.");
         }
 
-        private void SetUp(String title, int with, int heigt, int fontsize, bool showicon)
-        {
-            this.Title = title;
-            this.pre_showicon = showicon;
-            this.pre_width = with;
-            this.pre_heigt = heigt;
-            this.pre_fontsize = fontsize;
-            this.IsInitialized = false;
-        }
         private void SetUpWindow()
         {
             try
@@ -264,7 +284,7 @@ namespace SecondConsoleAPI
 
             }
         }
-        private void Print(String Text, SecondConsoleColors color, bool IsLine, bool isformatted)
+        private void Print(string Text, SecondConsoleColors color, bool IsLine, bool isformatted)
         {
             if (this.IsInitialized)
             {
@@ -276,14 +296,14 @@ namespace SecondConsoleAPI
                     }
                     if (this.IsInitialized)
                     {
-                        this.Window_Text.BeginInvoke((MethodInvoker)(() => {
+                        this.InvokeIfRequired(this.Window_Text, () => {
                             if (Window_Text.Lines.Length > 200)
                                 Window_Text.Text = "";
-                        }));
+                        });
                         this.canwrite = false;
                         if (!isformatted)
                         {
-                            this.Window_Text.BeginInvoke((MethodInvoker)(() => {
+                            this.InvokeIfRequired(this.Window_Text, () => {
                                 Window_Text.SelectionStart = Window_Text.TextLength;
                                 Window_Text.SelectionLength = 0;
                                 Window_Text.SelectionColor = ColorTools.GetColor(color, Color.White);
@@ -292,30 +312,31 @@ namespace SecondConsoleAPI
                                 else
                                     Window_Text.AppendText(Text);
                                 Window_Text.SelectionColor = Window_Text.ForeColor;
-                            }));
+                            });
                         }
                         else
                         {
-                            String[] parts = Text.Split('%');
-                            foreach (String scope in parts)
+                            string[] parts = Text.Split('%');
+                            foreach (string scope in parts)
                             {
                                 if (scope != "" & scope != null)
                                 {
-                                    this.Window_Text.BeginInvoke((MethodInvoker)(() => {
+
+                                    this.InvokeIfRequired(this.Window_Text, () => {
                                         Window_Text.SelectionStart = Window_Text.TextLength;
                                         Window_Text.SelectionLength = 0;
                                         Window_Text.SelectionColor = ColorTools.GetColorByFormattedChar(ColorTools.NormalizeFormattedChar(scope[0]), Color.White);
                                         Window_Text.AppendText(scope.Substring(1));
                                         Window_Text.SelectionColor = Window_Text.ForeColor;
-                                    }));
+                                    });
                                 }
                             }
                             if (IsLine)
                             {
-                                this.Window_Text.BeginInvoke((MethodInvoker)(() => {
-                                    Window_Text.AppendText("\n");
+                                this.InvokeIfRequired(this.Window_Text, () => {
+                                    Window_Text.AppendText(Environment.NewLine);
                                     Window_Text.SelectionColor = Window_Text.ForeColor;
-                                }));
+                                });
                             }
                         }
                         this.canwrite = true;
@@ -325,11 +346,18 @@ namespace SecondConsoleAPI
                 }
                 catch (Exception e)
                 {
-                    if (e.GetType() == new NotInitializedExeption().GetType())
+                    if (e.GetType() == typeof(NotInitializedExeption))
                         throw new NotInitializedExeption("Before using the SecondConsole you have to open it.");
                     this.canwrite = true;
                 }
             }         
+        }
+        private void InvokeIfRequired(Control c, MethodInvoker invoker)
+        {
+            if (c.InvokeRequired)
+                c.Invoke(invoker);
+            else
+                invoker();
         }
     }
 }
